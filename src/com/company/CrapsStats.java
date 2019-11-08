@@ -42,14 +42,14 @@ public class CrapsStats extends JFrame
 
         while (gameCount < nGames)
         {
-            die1.roll();
-            die2.roll();
-            int total = die1.getNumDots() + die2.getNumDots();
-            result = game.processRoll(total);
-            if (result != 0)
-                gameCount++;
-            if (result > 0)
-                winCount++;
+//            die1.roll();
+//            die2.roll();
+//            int total = die1.getNumDots() + die2.getNumDots();
+//            result = game.processRoll(total);
+//            if (result != 0)
+//                gameCount++;
+//            if (result > 0)
+//                winCount++;
         }
         numberIn.setText("");
         statsOut.setText(" Games: " + gameCount + " Wins: " + winCount);

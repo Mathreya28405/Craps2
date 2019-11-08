@@ -28,15 +28,18 @@ public class CrapsGame
         }
         else {
             point = total;
+            result = 0;
+        }
+        if (point==total) {
             if (total==point) {
                 result = 1;
                 point = 0;
             }
-            else if (total==7) {
+            if (total==7) {
                 result = -1;
                 point = 0;
             }
-            else if (total!=point && total!=7) {
+            if (total!=point && total!=7) {
                 point = total;
                 result = 0;
             }
