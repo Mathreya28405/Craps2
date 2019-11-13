@@ -18,34 +18,37 @@ public class CrapsGame
     {
         int result = 0;
 
-        if (total==2 || total==3 || total==12) {
-            result = -1;
-            point = 0;
-        }
-        else if (total==7 || total==11) {
-            result = 1;
-            point = 0;
-        }
-        else {
-            point = total;
-            result = 0;
-        }
-        if (point==total) {
-            if (total==point) {
-                result = 1;
-                point = 0;
-            }
-            if (total==7) {
+        if (point==0) {
+            if (total==2 || total==3 || total==12) {
                 result = -1;
                 point = 0;
             }
-            if (total!=point && total!=7) {
+            else if (total==7 || total==11) {
+                result = 1;
+                point = 0;
+            }
+            else {
                 point = total;
                 result = 0;
             }
-            result = 0;
+
         }
 
+        else {
+            if (total==point) {
+                result = 1;
+                point = 0;
+            } else
+            if (total==7) {
+                result = -1;
+                point = 0;
+
+            }
+            else {
+                result = 0;
+            }
+
+        }
 
         return result;
     }

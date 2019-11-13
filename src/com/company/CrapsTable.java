@@ -77,5 +77,3 @@ public class CrapsTable extends JPanel
         die2.draw(g);
     }
 }
-
-
